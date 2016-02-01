@@ -16,7 +16,7 @@
 	    					<a href="<?php echo base_url();?>report">
 	    						<div class="col-sm-12 dashstyle" >
 		    						<img src="<?php echo base_url(); ?>assets/images/dashboard/supplier.png" width='100%'>
-		    						<h4 style='padding:0px'>Search Report</h4>
+		    						<h4  style='padding:0px'>Search Report</h4>
 		    					</div>  	    						
 	    					</a>  					
 	    				</div>    					
