@@ -1,5 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+     $session_data = $this->session->all_userdata();
+        if ( isset($session_data['user']) && $session_data['user'] == TRUE ) {
+            
+        }else{
+            redirect('authentication','refresh');
+        }
+
+     
+
 $this->load->helper('inflector');
 ?>
 <!DOCTYPE html>
