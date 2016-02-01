@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2016 at 03:06 PM
+-- Generation Time: Feb 01, 2016 at 08:42 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `msc`
+-- Database: `msc_test`
 --
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `tbl_address` (
   `addressStreet` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `addressDetail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `tbl_address`
@@ -72,7 +72,8 @@ INSERT INTO `tbl_address` (`id`, `addressCountry`, `addressCity`, `addressDestri
 (25, 'Cambodia', '', '', '', '', '', '', '', ''),
 (26, 'Cambodia', '', '', '', '', '', '', '', ''),
 (27, 'Cambodia', '', '', '', '', '', '', '', ''),
-(28, 'Cambodia', '', '', '', '', '', '', '', '');
+(28, 'Cambodia', '', '', '', '', '', '', '', ''),
+(29, 'Cambodia', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -96,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `tbl_father_information` (
   `fatherStreet` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `fatherDetail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `tbl_father_information`
@@ -130,7 +131,8 @@ INSERT INTO `tbl_father_information` (`id`, `fatherName`, `fatherStatus`, `fathe
 (25, '', '', '', '', 'Cambodia', '', '', '', '', '', '', '', ''),
 (26, '', '', '', '', 'Cambodia', '', '', '', '', '', '', '', ''),
 (27, '', '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', ''),
-(28, '', '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', '');
+(28, '', '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', ''),
+(29, '', '', '', '', 'Cambodia', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -154,7 +156,7 @@ CREATE TABLE IF NOT EXISTS `tbl_mother_information` (
   `motherStreet` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `motherDetail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `tbl_mother_information`
@@ -188,7 +190,8 @@ INSERT INTO `tbl_mother_information` (`id`, `motherName`, `motherStatus`, `mothe
 (25, '', '', '', '', 'Cambodia', '', '', '', '', '', '', '', ''),
 (26, '', '', '', '', 'Cambodia', '', '', '', '', '', '', '', ''),
 (27, '', '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', ''),
-(28, '', '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', '');
+(28, '', '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', ''),
+(29, '', '', '', '', 'Cambodia', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -211,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `tbl_parent_information` (
   `parentStreet` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `parentDetail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `tbl_parent_information`
@@ -245,7 +248,8 @@ INSERT INTO `tbl_parent_information` (`id`, `parentName`, `parentOccupation`, `p
 (25, '', '', '', 'Cambodia', '', '', '', '', '', '', '', ''),
 (26, '', '', '', 'Cambodia', '', '', '', '', '', '', '', '123123'),
 (27, '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', ''),
-(28, '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', '');
+(28, '', '', '', 'CambodiaCambodia', '', '', '', '', '', '', '', ''),
+(29, '', '', '', 'Cambodia', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -265,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `tbl_placeofbirth` (
   `placeofbirthStreet` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `placeofbirthDetail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `tbl_placeofbirth`
@@ -299,7 +303,8 @@ INSERT INTO `tbl_placeofbirth` (`id`, `placeofbirthCountry`, `placeofbirthCity`,
 (25, 'Cambodia', 'qweqweqwe', '', '', '', '', '', '', ''),
 (26, 'Cambodia', 'qweqwe', '', '', '', '', '', '', ''),
 (27, 'Cambodia', 'qweqweqwe', '', '', '', '', '', '', ''),
-(28, 'Cambodia', 'qweqwe', '', '', '', '', '', '', '');
+(28, 'Cambodia', 'qweqwe', '', '', '', '', '', '', ''),
+(29, 'Cambodia', 'Kampong Speu Province', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -321,6 +326,49 @@ CREATE TABLE IF NOT EXISTS `tbl_position` (
 INSERT INTO `tbl_position` (`id`, `name`, `decrition`) VALUES
 (1, 'Administrator', ''),
 (2, 'Editer', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_province`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_province` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=26 ;
+
+--
+-- Dumping data for table `tbl_province`
+--
+
+INSERT INTO `tbl_province` (`id`, `name`) VALUES
+(1, 'Phnom Penh'),
+(2, 'Banteay Meanchey Province'),
+(3, 'Battambang Province'),
+(4, 'Kampong Cham Province'),
+(5, 'Kampong Chhnang Province'),
+(6, 'Kampong Speu Province'),
+(7, 'Kampong Thom Province'),
+(8, 'Kampot Province'),
+(9, 'Kandal Province'),
+(10, 'Koh Kong Province'),
+(11, 'Kep Province'),
+(12, 'Kratié Province'),
+(13, 'Mondulkiri Province'),
+(14, 'Oddar Meanchey Province'),
+(15, 'Pailin Province'),
+(16, 'Preah Sihanouk Province'),
+(17, 'Preah Vihear Province'),
+(18, 'Pursat Province'),
+(19, 'Prey Veng Province'),
+(20, 'Ratanakiri Province'),
+(21, 'Siem Reap Province'),
+(22, 'Stung Treng Province'),
+(23, 'Svay Rieng Province'),
+(24, 'Takéo Province'),
+(25, 'Tboung Khmum Province');
 
 -- --------------------------------------------------------
 
@@ -359,7 +407,7 @@ CREATE TABLE IF NOT EXISTS `tbl_student_information` (
   `parentID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   PRIMARY KEY (`auto_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data for table `tbl_student_information`
@@ -372,7 +420,8 @@ INSERT INTO `tbl_student_information` (`auto_id`, `studentID`, `studentenrollDat
 (24, '0013', '2016-01-26', 'Thy Thona', 'ធី ថុនា', '2016-01-27', 'Khmer', '', '', '', '', '', 'file_edit1.jpg', '0000-00-00', 'ឆឹេឆឹេ', '0000-00-00', '', 'studying', '', '12', '6', '', '', 24, 24, 24, 24, 24, 4),
 (25, '3123', '2016-01-29', 'Chandy', 'wejrwkjerkj', '2016-01-29', 'Khmer-Pnong', 'female', '1', '3', 'qweqwe', 'qweqwe', '', '0000-00-00', '', '0000-00-00', '', 'studying', '', '', '', '', '', 25, 25, 25, 25, 25, 5),
 (26, '0012', '2016-01-31', 'Thy Thona23123', 'ធី ថុនា', '1993-02-26', 'Khmer', 'male', '1', '5', '22', 'ពិារការដៃ', 'Snapshot_20130226_1.JPG', '2016-08-09', '12', '0000-00-00', '12', 'studying', '23', '', '2012', '', '1', 26, 26, 26, 26, 26, 6),
-(27, '3123', '2016-01-29', 'chandy', 'wejrwkjerkj', '2016-01-29', 'Khmer', '', '', '3', 'qweqwe', 'qweqwe', '', '0000-00-00', '', '0000-00-00', '', 'studying', '', '', '', '', '', 27, 27, 27, 27, 27, 6);
+(27, '3123', '2016-01-29', 'chandy', 'wejrwkjerkj', '2016-01-29', 'Khmer', '', '', '3', 'qweqwe', 'qweqwe', '', '0000-00-00', '', '0000-00-00', '', 'studying', '', '', '', '', '', 27, 27, 27, 27, 27, 6),
+(28, 'qweqwe', '2016-02-01', '123123qwe', 'qweqwe123123', '0000-00-00', 'Khmer', '', '', '', '', '', '', '0000-00-00', '', '0000-00-00', '', 'studying', '', '', '2016', '', '', 29, 29, 29, 29, 29, 2);
 
 -- --------------------------------------------------------
 
@@ -395,7 +444,7 @@ CREATE TABLE IF NOT EXISTS `tbl_student_servation` (
   `oneoften` text COLLATE utf8_unicode_ci NOT NULL,
   `oneofeleven` text COLLATE utf8_unicode_ci NOT NULL,
   `oneofthirteen` text COLLATE utf8_unicode_ci NOT NULL,
-  `oneoffitheenYN` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `oneoffifthteenYN` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `oneoftwelve` text COLLATE utf8_unicode_ci NOT NULL,
   `oneofsixteenYN` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `oneofseventeenYN` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
@@ -441,7 +490,14 @@ CREATE TABLE IF NOT EXISTS `tbl_student_servation` (
   `studentID` int(11) NOT NULL,
   `dateofservation` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `tbl_student_servation`
+--
+
+INSERT INTO `tbl_student_servation` (`id`, `data_entry_id`, `oneofone`, `oneoftwo`, `oneofthree`, `oneoffour`, `oneoffiveYN`, `oneofsixYN`, `oneofseven`, `oneofeightYN`, `oneofnineYN`, `oneoften`, `oneofeleven`, `oneofthirteen`, `oneoffifthteenYN`, `oneoftwelve`, `oneofsixteenYN`, `oneofseventeenYN`, `oneofeightteenYN`, `oneofnineteen`, `onedetail`, `oneofthreeYN`, `oneofsevenYN`, `oneofelevenYN`, `oneoftwelveYN`, `oneofthirteenYN`, `oneoffourteenYN`, `oneoffourteen`, `twoofoneYN`, `twoofone`, `twooftwoYN`, `twoofthree`, `twooffour`, `twodetail`, `threeofoneYN`, `threeofone`, `threeoftwoYN`, `threeoftwo`, `threeofthreeYN`, `threeofthree`, `threeoffourYN`, `threeoffour`, `threedetail`, `fourofoneYN`, `fourofone`, `fouroftwoYN`, `fouroftwo`, `fourdetail`, `fiveofoneYN`, `fiveofone`, `fiveoftwoYN`, `fiveoftwo`, `fiveofthreeYN`, `fiveofthree`, `fiveoffourYN`, `fiveoffour`, `fivedetail`, `studentID`, `dateofservation`) VALUES
+(3, 2, '32reqwe222qqq', 'werwer', 'werwer', 'werwerwer', '', '', 'werwerwerwerwerwerwerwer345345', '', '', 'werwer', 'werwerwer', 'werwer', '', 'werwer', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'qweqwe', '', 'rwer', '', '', '', 'qweqwe', '', 'qweqwe', 0, '', '', '', 'qweqwe', '', 'qweqwe', '', '', '', '', '', '', '', '', 'qweqwe', '', 24, '2016-02-02');
 
 -- --------------------------------------------------------
 
