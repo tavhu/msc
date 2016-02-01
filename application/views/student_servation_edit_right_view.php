@@ -33,7 +33,7 @@
                           }
 
                       ?>
-                            <input type='text' name="dateofservation" value='<?php echo isset($row->dateofservation) ? $row->dateofservation : $defaultDate;?>' class="form-control input-sm datepicker"/>
+                            <input type='text' name="dateofservation" value='<?php echo isset($servation_row->dateofservation) ? $servation_row->dateofservation : $defaultDate;?>' class="form-control input-sm datepicker"/>
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                             </span>
                       </div>
@@ -70,7 +70,7 @@
             </div>
             <div class="form-group">
               <label for="pwd">1.03 Does the child useand medicine?</label>  <br>
-              <label> <input type='radio' name='oneofthreeYN'  value='Yes' <?php  echo isset($servation_row->oneofthreeYN) ? ($row->oneofthreeYN == 'Yes' ? 'checked' : '') : "";?>  > Yes </label>                                       
+              <label> <input type='radio' name='oneofthreeYN'  value='Yes' <?php  echo isset($servation_row->oneofthreeYN) ? ($servation_row->oneofthreeYN == 'Yes' ? 'checked' : '') : "";?>  > Yes </label>                                       
               <label style='padding-left:25px;'> <input type='radio' name='oneofthreeYN' <?php echo isset($servation_row->oneofthreeYN) ?  ($servation_row->oneofthreeYN == 'No' ? 'checked' : '') : "";?> value='No'> No </label>
                 <br> <span class='red'> if Yes, Specify</span>
               <input type="text"  name="oneofthree" value="<?php echo isset($servation_row->oneofthree) ? $servation_row->oneofthree : set_value('oneofthree'); ?>" class="form-control" >
@@ -82,7 +82,7 @@
              <div class="form-group">
               <label for="pwd">1.05 Does the child have fits</label>  <br>
               <label> <input type='radio' name='oneoffiveYN'  value='Yes' <?php  echo isset($servation_row->oneoffiveYN) ? ($servation_row->oneoffiveYN == 'Yes' ? 'checked' : '') : "";?>  > Yes </label>                                       
-              <label style='padding-left:25px;'> <input type='radio' name='oneoffiveYN' <?php echo isset($servation_row->oneoffiveYN) ?  ($row->oneoffiveYN == 'No' ? 'checked' : '') : "";?> value='No'> No </label>
+              <label style='padding-left:25px;'> <input type='radio' name='oneoffiveYN' <?php echo isset($servation_row->oneoffiveYN) ?  ($servation_row->oneoffiveYN == 'No' ? 'checked' : '') : "";?> value='No'> No </label>
              </div>
              <div class="form-group">
               <label for="pwd">1.06 Can the child move limbs adequately?</label>  <br>
@@ -337,7 +337,7 @@
   <div class='form-group'>
                           <div class=''></div>  
                           <div class='col-sm-6'>
-                            <input type='hidden' name='uid' value='<?php echo $this->uri->segment(3);?>' class='hidden'>
+                            <input type='hidden' name='uid' value='<?php echo $this->myencryption->encode($auto->auto_id);?>' class='hidden'>
                             <input  type='hidden' name='data_entry_id' value='<?php echo $this->session->userdata('user_id');?>'>
                             <input type='hidden' name='secret' value='<?php echo isset($auto->auto_id) ? "EDIT" : "INSERT"; ?>'   class='hidden'>
                             <input type='submit' value='<?php echo isset($auto->auto_id) ? "Update" : "Save changes";  ?>' <?php echo isset($disabled) ? $disabled : "";?> class='btn btn-primary'>                            

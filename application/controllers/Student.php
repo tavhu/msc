@@ -645,12 +645,14 @@ class Student extends CI_Controller {
 	}
 
 	public function edit_servation($id = ''){
-
+		$this->load->library("Myencryption");
 		$data = $this->check_if_student_existed($id);	
 
 		$data['header_info'] = "Student Servation Form";
 		$data['panel_info'] = "Student Servation Information";
 		$data['select_student'] = "servation";
+
+		$id = $this->myencryption->decode($id);
 		$result = $this->get_row('studentID',$id,'tbl_student_servation');
 		$data['servation_row'] = $result->row();
 		$this->load->view('Header');
@@ -813,9 +815,42 @@ class Student extends CI_Controller {
 	 		'fiveoffour' => $fiveoffour ,
 	 		'fivedetail' => $fivedetail ,
  			);
+			
+			$clearndata = $this->security->xss_clean($one_series_array); //clearn data
+			$this->db->trans_start();
+			$this->db->where('studentID',$studentID);
+			$result = $this->db->get("tbl_student_servation");
+			echo $result->num_rows();
+			if ($result->num_rows() >= 1){
+			//update
+				$this->db->where('studentID',$studentID);
+				$this->db->update('tbl_student_servation',$clearndata);
+			}else{
+			//insert
+				$this->db->insert('tbl_student_servation',$clearndata);
+			}
 
-		var_dump($one_series_array);
+			$this->db->trans_complete();
 
+			if ($this->db->trans_status() === TRUE ) {
+
+				$data['success'] = "Saved";
+
+			}else{
+
+				$data['failed'] = "Failed!! please try again.";
+			}
+			
+			$data = $this->check_if_student_existed($studentID_Encryptyed);
+			$data['header_info'] = "Student Servation Form";
+			$data['panel_info'] = "Student Servation Information";	
+
+			$this->load->view('Header');
+			$this->load->view('student_servation_edit_view',$data);
+			$this->load->view('Footer');
+
+
+			
 
 
 
