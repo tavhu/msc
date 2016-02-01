@@ -99,6 +99,7 @@ $this->load->helper('inflector');
         </div>
         <!-- /.container -->
     </nav>
+    
 <script type="text/javascript" src="<?php echo base_url()?>assets/js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>assets/js/bootstrap.js"> </script>
 <?php 
@@ -110,3 +111,5 @@ $this->load->helper('inflector');
         }
 
      ?> 
+
+
