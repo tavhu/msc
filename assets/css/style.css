@@ -1,0 +1,87 @@
+.font-metal{
+
+	font-family: 'Khmer';
+
+}
+
+:lang(en) {
+
+font-size: 85%;
+
+}
+
+:lang(kh) {
+
+font-size: 125%;
+
+font-family: "Metal";;
+
+}
+
+.whitebackground_profile{
+
+	background-color:white; 	
+	margin-bottom:25px;
+
+}
+#footer{
+
+	background-color:#bbb; 
+	padding:20px; 
+	margin-top:0.5%;
+	color:white;
+	border-top:1px solid white;
+}
+
+.under_line{
+
+	border-bottom:1px solid #53b380;
+	margin-bottom:10px;
+}
+.dashstyle{
+	border:1px solid green;
+	text-align:center; 
+	border-radius:7px; 
+	margin-top:15px; 
+	margin-bottom:15px; 
+	padding:10px;
+}
+#loginbody{
+
+	border:1px solid #bbb; 
+	border-top:5px solid #428bca;
+	text-align:center;
+	padding-bottom: 20px;	
+	background-color:white;
+}
+#loginheader{
+	margin-bottom:10px;
+}
+#logincontainer{
+	margin-top:100px;	
+}
+
+.text-centered{
+
+	text-align: center !important;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.nav-tabs {
+    margin-bottom: 0;
+}
+.no-decoration{
+	
+	text-decoration:none; 
+	color:white;
+}
+
+.red{
+	color:red;
+}
