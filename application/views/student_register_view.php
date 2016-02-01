@@ -5,6 +5,7 @@
    <?php 
             $arr = array('role'=>'form', 'id'=>'registration-form','class'=>'form form-horizontal');
             echo form_open_multipart('student/validation',$arr); 
+            $provinces = $this->db->get('tbl_province');
   ?>    
 <div class="container font-metal ">
     <div class="row">
@@ -345,8 +346,30 @@
                         <div class="col-sm-6">
                               <div class="form-group">
                                   <label for="" class='control-label col-sm-4'> City /ខេត្តក្រុង</label>
-                                  <div class='col-sm-8'>
-                                     <input type='text' name='placeofbirthCity' value= "<?php echo isset($row->placeofbirthCity) ? $row->placeofbirthCity : set_value('placeofbirthCity');?>" class='form-control' data-validation='required' >
+                                  <div class='col-sm-8'>                                  
+                                  <select class='form-control' name='placeofbirthCity' data-validation='required'>
+                                    <option>Please Choose</option>
+                          <?php 
+                                   $province_from_setvalue = set_value('placeofbirthCity');
+                                   foreach ($provinces->result() as  $value) {
+                                    $selected = "";
+
+                                    if (isset($row->placeofbirthCity)) {                                      
+                                        if ($row->placeofbirthCity === $value->name) {
+                                          $selected = "selected";
+                                        }
+                                    }else {
+                                        if ($province_from_setvalue == $value->name) {
+                                             $selected = "selected";
+                                        }
+                                    }
+
+                                     echo "<option value='$value->name' $selected >$value->name</option>";
+                                   }
+
+
+                           ?>
+                                  </select>
                                   </div>  
                             </div>
                         </div>
@@ -450,7 +473,32 @@
                               <div class="form-group">
                                   <label for="" class='control-label col-sm-4'> City /ខេត្តក្រុង</label>
                                   <div class='col-sm-8'>
-                                     <input type='text' name='addressCity' value= "<?php echo isset($row->addressCity) ? $row->addressCity : set_value('addressCity');?>" class='form-control'>
+                                    
+                                
+                                <select  name='addressCity' class='form-control' >
+                                  <option>Please Choose</option>
+                                
+                             <?php 
+                                   $province_from_setvalue = set_value('addressCity');
+                                   foreach ($provinces->result() as  $value) {
+                                    $selected = "";
+
+                                    if (isset($row->addressCity)) {                                      
+                                        if ($row->addressCity === $value->name) {
+                                          $selected = "selected";
+                                        }
+                                    }else {
+                                        if ($province_from_setvalue == $value->name) {
+                                             $selected = "selected";
+                                        }
+                                    }
+
+                                     echo "<option value='$value->name' $selected >$value->name</option>";
+                                   }
+
+
+                           ?>
+                            </select>
                                   </div>  
                             </div>
                         </div>
@@ -590,8 +638,32 @@
                         <div class="col-sm-6">
                               <div class="form-group">
                                   <label for="" class='control-label col-sm-4'> City /ខេត្តក្រុង</label>
-                                  <div class='col-sm-8'>
-                                     <input type='text' name='motherCity' value= "<?php echo isset($row->motherCity) ? $row->motherCity : set_value('motherCity');?>" class='form-control'>
+                                  <div class='col-sm-8'>    
+
+                                    <select  name='motherCity' class='form-control' >
+                                        <option>Please Choose</option>
+                                      
+                                   <?php 
+                                         $province_from_setvalue = set_value('motherCity');
+                                         foreach ($provinces->result() as  $value) {
+                                          $selected = "";
+
+                                          if (isset($row->motherCity)) {                                      
+                                              if ($row->motherCity === $value->name) {
+                                                $selected = "selected";
+                                              }
+                                          }else {
+                                              if ($province_from_setvalue == $value->name) {
+                                                   $selected = "selected";
+                                              }
+                                          }
+
+                                           echo "<option value='$value->name' $selected >$value->name</option>";
+                                         }
+
+                                 ?>
+                                  </select>
+
                                   </div>  
                             </div>
                         </div>
@@ -733,7 +805,31 @@
                               <div class="form-group">
                                   <label for="" class='control-label col-sm-4'> City /ខេត្តក្រុង</label>
                                   <div class='col-sm-8'>
-                                     <input type='text' name='fatherCity' value= "<?php echo isset($row->fatherCity) ? $row->fatherCity : set_value('fatherCity');?>" class='form-control'>
+                                  
+                                  <select  name='fatherCity' class='form-control' >
+                                        <option>Please Choose</option>
+                                      
+                                   <?php 
+                                         $province_from_setvalue = set_value('fatherCity');
+                                         foreach ($provinces->result() as  $value) {
+                                          $selected = "";
+
+                                          if (isset($row->fatherCity)) {                                      
+                                              if ($row->fatherCity === $value->name) {
+                                                $selected = "selected";
+                                              }
+                                          }else {
+                                              if ($province_from_setvalue == $value->name) {
+                                                   $selected = "selected";
+                                              }
+                                          }
+
+                                           echo "<option value='$value->name' $selected >$value->name</option>";
+                                         }
+
+                                 ?>
+                                  </select>
+
                                   </div>  
                             </div>
                         </div>
@@ -862,7 +958,31 @@
                               <div class="form-group">
                                   <label for="" class='control-label col-sm-4'> City /ខេត្តក្រុង</label>
                                   <div class='col-sm-8'>
-                                     <input type='text' name='parentCity' value= "<?php echo isset($row->parentCity) ? $row->parentCity : set_value('parentCity');?>" class='form-control'>
+                                                                    
+                                     <select  name='parentCity' class='form-control' >
+                                        <option>Please Choose</option>
+                                      
+                                   <?php 
+                                         $province_from_setvalue = set_value('parentCity');
+                                         foreach ($provinces->result() as  $value) {
+                                          $selected = "";
+
+                                          if (isset($row->parentCity)) {                                      
+                                              if ($row->parentCity === $value->name) {
+                                                $selected = "selected";
+                                              }
+                                          }else {
+                                              if ($province_from_setvalue == $value->name) {
+                                                   $selected = "selected";
+                                              }
+                                          }
+
+                                           echo "<option value='$value->name' $selected >$value->name</option>";
+                                         }
+
+                                 ?>
+                                  </select>
+
                                   </div>  
                             </div>
                         </div>
