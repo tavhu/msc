@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2016 at 07:56 PM
+-- Generation Time: Feb 01, 2016 at 02:18 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -359,7 +359,7 @@ CREATE TABLE IF NOT EXISTS `tbl_student_information` (
   `parentID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   PRIMARY KEY (`auto_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=28 ;
 
 --
 -- Dumping data for table `tbl_student_information`
